@@ -5,6 +5,7 @@ A basic WIP toolbox for creating ArmA Reforger Scenarios
 (Features are subject to change, very WIP for now)
 1. Waypoint movement speed property (Idle, Walk, Run, Sprint)
 2. Commonly used waypoint prefabs
+3. SCR_BaseLockComponent has a dropdown for overriding lock state
 
 # Instructions
 1. Download the repository
