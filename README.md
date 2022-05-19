@@ -1,6 +1,11 @@
 # ArmAReforger-MissionToolbox
 A basic toolbox for creating ArmA Reforger Scenarios
 
+# Features
+(Features are subject to change, very WIP for now)
+1. Waypoint movement speed property (Idle, Walk, Run, Sprint)
+2. Commonly used waypoint prefabs
+
 # Instructions
 1. Download the repository
 2. Extract the contents
