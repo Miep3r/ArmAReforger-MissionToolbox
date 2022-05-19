@@ -1,0 +1,12 @@
+SCR_TimedWaypoint {
+ ID "5966E5CE80388631"
+ coords 2687.019 389.014 5186.562
+ Type "Wait"
+ Title "Waypoint that waits"
+ AIBehaviorTree "{4583783F882CEAB6}AI/BehaviorTrees/Waypoints/WP_Wait.bt"
+ AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+ CompletionRadius 5
+ Autocomplete 0
+ CompletionType Any
+ m_holdingTime 60
+}

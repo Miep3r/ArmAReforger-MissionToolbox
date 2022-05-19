@@ -1,0 +1,191 @@
+BehaviorTree {
+ Name "AI/BehaviorTrees/Waypoints/WP_Move.bt"
+ Nodes {
+  RootNode Root {
+   Name "Root"
+   EditorPos 144.571 -6
+   Nodes {
+    Sequence Sequence {
+     Name "Sequence"
+     EditorPos 131.429 144.143
+     Nodes {
+      AITaskGetWaypoint "Get Waypoint" {
+       Name "Get Waypoint"
+       EditorPos -1344 443.25
+       OutWaypoint 1
+      }
+      SCR_AIGetPriorityFromWaypoint "SCR_AI Get Priority From Waypoint" {
+       Name "SCR_AI Get Priority From Waypoint"
+       EditorPos -1061 435
+       OutPorts {
+        SingleOutputPortContainer SingleOutputPortContainer {
+         Port 3
+         PortName "IsPriority"
+        }
+       }
+      }
+      SCR_AIGetSpeedFromWaypoint "SCR_AI Get Speed From Waypoint" {
+       Name "SCR_AI Get Speed From Waypoint"
+       EditorPos -748.944 265.944
+       OutPorts {
+        SingleOutputPortContainer SingleOutputPortContainer {
+         Port 4
+         PortName "MoveSpeed"
+        }
+       }
+      }
+      DecoTestVariable "Test Variable" {
+       Name "Test Variable"
+       EditorPos -450.143 423
+       Nodes {
+        SCR_AISendOrder "SCR_AI Send Order" {
+         Name "SCR_AI Send Order"
+         EditorPos -494.679 644.643
+         InPorts {
+          SingleInputPortContainer SingleInputPortContainer {
+           Port -1
+           PortName "OrderTypeIn"
+          }
+          SingleInputPortContainer SingleInputPortContainer {
+           Port -1
+           PortName "Receiver"
+          }
+          SingleInputPortContainer SingleInputPortContainer {
+           Port -1
+           PortName "OrderValueIn"
+          }
+          SingleInputPortContainer SingleInputPortContainer {
+           Port -1
+           PortName "DebugText"
+          }
+         }
+         m_string "Clearing stance and weapon"
+         m_orderType BACK_TO_DEFAULT
+        }
+       }
+       ForceNodeResult Success
+       InVariable 3
+       TestType EqualsValue
+       TestValue "true"
+      }
+      SCR_AISendOrder "SCR_AI Send Order" {
+       Name "SCR_AI Send Order"
+       EditorPos 17.627 390.925
+       InPorts {
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "OrderTypeIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "Receiver"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port 4
+         PortName "OrderValueIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "DebugText"
+        }
+       }
+       m_orderType MOVEMENT_TYPE
+      }
+      SCR_AISendGoalMessage "SCR_AI Send Goal Message" {
+       Name "SCR_AI Send Goal Message"
+       EditorPos 305.853 440.754
+       InPorts {
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "Receiver"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "StringIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port 2
+         PortName "EntityIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "IntegerIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "VectorIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "BoolIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "FloatIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "TypenameIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port 0
+         PortName "Prioritize"
+        }
+       }
+       m_string "Movin to waypoint"
+       m_messageType MOVE
+       m_bIsWaypointRelated 1
+      }
+      AITaskReturnState "Return State" {
+       Name "Return State"
+       EditorPos 607.178 443.786
+       Result RUNNING
+      }
+     }
+    }
+   }
+  }
+ }
+ Variables {
+  Variable waypointEntity {
+   VariableName "waypointEntity"
+   VariableTypeName "IEntity"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable isPriority {
+   VariableName "isPriority"
+   VariableTypeName "bool"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable moveSpeed {
+   VariableName "moveSpeed"
+   VariableTypeName "int"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+ }
+ VariablesRefs {
+  VariableReference isPriority {
+   VariableType 1
+   EditorPos 88.393 665.714
+  }
+  VariableReference waypointEntity {
+   VariableType 0
+   EditorPos -1002.321 645.607
+  }
+  VariableReference waypointEntity {
+   VariableType 0
+   EditorPos 13.393 586.964
+  }
+  VariableReference isPriority {
+   VariableType 1
+   EditorPos -732 643
+  }
+  VariableReference moveSpeed {
+   VariableType 2
+   EditorPos -174.5 533.75
+  }
+ }
+}

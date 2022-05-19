@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{B049D4C74FBC0C4E}Prefabs/AI/Waypoints/AIWaypoint_GetInNearest.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

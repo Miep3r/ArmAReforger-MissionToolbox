@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{C40316EE26846CAC}Prefabs/AI/Waypoints/AIWaypoint_GetOut.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

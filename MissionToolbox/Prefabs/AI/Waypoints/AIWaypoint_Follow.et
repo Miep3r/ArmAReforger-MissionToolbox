@@ -1,0 +1,11 @@
+SCR_EntityWaypoint {
+ ID "5966E5CE457FD56C"
+ coords 2687.019 389.014 5186.562
+ Type "Follow"
+ Title "FollowWaypoint"
+ AIBehaviorTree "{C8508A9BBD1D8F65}AI/BehaviorTrees/Waypoints/WP_Follow.bt"
+ AIBehaviorTreeMoveTo "{EDE4E03C9870DE2E}AI/BehaviorTrees/Waypoints/WP_Blank.bt"
+ CompletionRadius 6
+ Autocomplete 0
+ CompletionType Any
+}

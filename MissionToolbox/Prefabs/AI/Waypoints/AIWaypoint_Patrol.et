@@ -1,0 +1,9 @@
+SCR_AIWaypoint {
+ ID "5966E5CE759EA501"
+ coords 2687.019 389.014 5186.562
+ Type "Patrol"
+ Title "Like simple move only different move type"
+ AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+ CompletionRadius 5
+ CompletionType Any
+}

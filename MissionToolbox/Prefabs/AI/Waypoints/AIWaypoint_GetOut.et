@@ -1,0 +1,10 @@
+SCR_AIWaypoint {
+ ID "5966E5CE6D0EC969"
+ coords 2687.019 389.014 5186.562
+ Type "GetOut"
+ Title "GetOutWaypoint"
+ AIBehaviorTree "{AC030149D64DA490}AI/BehaviorTrees/Waypoints/WP_GetOut.bt"
+ AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+ CompletionRadius 9
+ Autocomplete 0
+}

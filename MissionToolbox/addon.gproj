@@ -1,0 +1,8 @@
+GameProject {
+ ID "MissionToolbox"
+ GUID "5966BED101962435"
+ TITLE "MissionToolbox"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}

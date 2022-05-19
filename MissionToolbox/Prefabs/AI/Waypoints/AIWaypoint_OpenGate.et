@@ -1,0 +1,11 @@
+SCR_SmartActionWaypoint {
+ ID "5966E5CE700D3F1C"
+ coords 71.719 -0.015 165.579
+ Type "GateWaypoint"
+ Title "OpenGateWaypoint"
+ AIBehaviorTree "{D9C7103B689010DC}AI/BehaviorTrees/Waypoints/WP_EnactSmartAction.bt"
+ AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+ Autocomplete 0
+ CompletionType Any
+ m_sSmartActionTag "OpenGate"
+}

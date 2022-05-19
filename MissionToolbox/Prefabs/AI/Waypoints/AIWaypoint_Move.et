@@ -1,0 +1,9 @@
+SCR_AIWaypoint {
+ ID "5966E5CE79D1D022"
+ coords 2687.019 389.014 5186.562
+ Type "Move"
+ Title "Simple move wyapoint"
+ AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+ CompletionRadius 5
+ CompletionType Any
+}

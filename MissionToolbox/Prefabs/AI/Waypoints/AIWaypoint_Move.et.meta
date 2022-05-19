@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{139DC34EB8CCD19C}Prefabs/AI/Waypoints/AIWaypoint_Move.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

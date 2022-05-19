@@ -1,0 +1,10 @@
+SCR_EntityWaypoint {
+ ID "5966E5CE5FA82388"
+ coords 2687.019 389.014 5186.562
+ Type "GetIn"
+ Title "GetInWaypoint"
+ AIBehaviorTree "{6A158F27D0E9B104}AI/BehaviorTrees/Waypoints/WP_GetIn.bt"
+ AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+ CompletionRadius 9
+ Autocomplete 0
+}

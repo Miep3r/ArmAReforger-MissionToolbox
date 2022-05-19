@@ -1,0 +1,11 @@
+SCR_AIWaypoint {
+ ID "5966BED142B4B05C"
+ coords 2687.019 389.014 5186.562
+ Type "Move"
+ Title "Move ignoring autonomous behavior."
+ AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+ CompletionRadius 5
+ CompletionType Any
+ m_bIsPriority 1
+ m_iMoveSpeed WALK
+}

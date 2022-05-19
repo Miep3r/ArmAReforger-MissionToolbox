@@ -1,0 +1,12 @@
+SCR_BoardingWaypoint {
+ ID "5966E5CE54B87343"
+ coords 2687.019 389.014 5186.562
+ Type "GetInNearest"
+ Title "GetInNearestWaypoint"
+ AIBehaviorTree "{55C11C7187131760}AI/BehaviorTrees/Waypoints/WP_GetInNearest.bt"
+ AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+ CompletionRadius 20
+ Autocomplete 0
+ m_bGunnerAllowed 1
+ m_bCargoAllowed 1
+}

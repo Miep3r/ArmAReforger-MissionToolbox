@@ -1,0 +1,197 @@
+BehaviorTree {
+ Name "AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+ Nodes {
+  RootNode Root {
+   Name "Root"
+   EditorPos 128.857 -14.571
+   Nodes {
+    Sequence Sequence {
+     Name "Sequence"
+     EditorPos 131.429 144.143
+     Nodes {
+      SCR_AIGetSpeedFromWaypoint "SCR_AI Get Speed From Waypoint" {
+       Name "SCR_AI Get Speed From Waypoint"
+       EditorPos -1231.667 206.806
+       OutPorts {
+        SingleOutputPortContainer SingleOutputPortContainerClass {
+         Port 5
+         PortName "MoveSpeed"
+        }
+       }
+      }
+      AITaskGetWaypoint "Get Waypoint" {
+       Name "Get Waypoint"
+       EditorPos -1209.571 418.107
+       OutWaypoint 1
+      }
+      SCR_AIGetPriorityFromWaypoint "SCR_AI Get Priority From Waypoint" {
+       Name "SCR_AI Get Priority From Waypoint"
+       EditorPos -967.143 414.286
+       OutPorts {
+        SingleOutputPortContainer SingleOutputPortContainer {
+         Port 3
+         PortName "IsPriority"
+        }
+       }
+      }
+      SCR_AISendOrder "SCR_AI Send Order" {
+       Name "SCR_AI Send Order"
+       EditorPos -572.734 408.694
+       InPorts {
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "OrderTypeIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "Receiver"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port 5
+         PortName "OrderValueIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "DebugText"
+        }
+       }
+       m_orderType MOVEMENT_TYPE
+      }
+      SCR_AISendOrder "SCR_AI Send Order" {
+       Name "SCR_AI Send Order"
+       EditorPos -255.591 404.408
+       InPorts {
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "OrderTypeIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "Receiver"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "OrderValueIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "DebugText"
+        }
+       }
+       m_string "default for soldiers"
+       m_orderType BACK_TO_DEFAULT
+      }
+      AITaskGetControlledEntity "Get Controlled Entity" {
+       Name "Get Controlled Entity"
+       EditorPos 36.003 418.026
+       InEntity -1
+       OutAgent 0
+      }
+      SCR_AISendGoalMessage "SCR_AI Send Goal Message" {
+       Name "SCR_AI Send Goal Message"
+       EditorPos 677.46 475.04
+       InPorts {
+        SingleInputPortContainer SingleInputPortContainer {
+         Port 0
+         PortName "Receiver"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "StringIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port 2
+         PortName "EntityIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "IntegerIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "VectorIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "BoolIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "FloatIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port -1
+         PortName "TypenameIn"
+        }
+        SingleInputPortContainer SingleInputPortContainer {
+         Port 4
+         PortName "Prioritize"
+        }
+       }
+       m_string "Patrolling to waypoint"
+       m_messageType MOVE
+       m_bIsWaypointRelated 1
+      }
+      AITaskReturnState "Return State" {
+       Name "Return State"
+       EditorPos 976.464 456.643
+       Result RUNNING
+      }
+     }
+    }
+   }
+  }
+ }
+ Variables {
+  Variable waypointEntity {
+   VariableName "waypointEntity"
+   VariableTypeName "IEntity"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable self {
+   VariableName "self"
+   VariableTypeName "AIAgent"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable isPriority {
+   VariableName "isPriority"
+   VariableTypeName "bool"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+  Variable moveSpeed {
+   VariableName "moveSpeed"
+   VariableTypeName "int"
+   VariableExposedInput 0
+   VariableExposedOutput 0
+  }
+ }
+ VariablesRefs {
+  VariableReference self {
+   VariableType 1
+   EditorPos 427.893 434.464
+  }
+  VariableReference waypointEntity {
+   VariableType 0
+   EditorPos -895.749 616.321
+  }
+  VariableReference waypointEntity {
+   VariableType 0
+   EditorPos 386.25 621.25
+  }
+  VariableReference isPriority {
+   VariableType 2
+   EditorPos -667.143 608.572
+  }
+  VariableReference isPriority {
+   VariableType 2
+   EditorPos 447.143 710
+  }
+  VariableReference moveSpeed {
+   VariableType 3
+   EditorPos -872.222 280
+  }
+ }
+}

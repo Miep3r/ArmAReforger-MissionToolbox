@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{1966BC58CE769D6A}Prefabs/AI/Waypoints/AIWaypoint_OpenGate.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
