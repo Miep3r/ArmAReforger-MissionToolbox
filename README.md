@@ -1,5 +1,5 @@
 # ArmAReforger-MissionToolbox
-A basic toolbox for creating ArmA Reforger Scenarios
+A basic WIP toolbox for creating ArmA Reforger Scenarios
 
 # Features
 (Features are subject to change, very WIP for now)
